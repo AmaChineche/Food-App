@@ -8,14 +8,7 @@ import InnerContainer from './Component/InnerContainer'
 import FoodDetails from './Component/FoodDetails'
 function App() {
   const [foodData, setFoodData]= useState([]);
-  const [foodId, setFoodId]= useState("");
-
-
-
-
-
-
-
+  const [foodId, setFoodId]= useState("656329");
 
   return (
     <div className="App">
@@ -23,11 +16,11 @@ function App() {
       <Search foodDate={foodData} setFoodData={setFoodData}/>
       <Container>
         <InnerContainer>
-        <FoodList foodData={foodData}/>
+        <FoodList setFoodId={setFoodId} foodData={foodData}/>
         </InnerContainer>
 
         <InnerContainer>
-          <FoodDetails/>
+          <FoodDetails foodId= {foodId}/>
         </InnerContainer>
       </Container>
 
